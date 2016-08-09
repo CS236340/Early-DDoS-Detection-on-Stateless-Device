@@ -64,6 +64,7 @@
   * sudo ./veth_setup.sh
 	
 4. compile Driver files:
+  * check ASIC source and ASIC output Driver paths in the beginning of driver.cpp file
   * cd to ddos_switch folder
   * g++ driver.cpp -o driver -std=c++11
 	
