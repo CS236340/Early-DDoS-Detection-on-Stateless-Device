@@ -50,13 +50,13 @@
 
 2. additional ASIC folder files:
   1. primitives.json - this file contains the prototypes of DDoS switch primitive actions
-    * copy primitives.json to p4c-bmv2->p4c_bm (override existing primitives.json)
+    * copy primitives.json to p4c-bmv2->p4c_bm (override existing primitives.json, just note that this file is relative to April 2016 version)
     * re-install p4c-bmv2:
       * cd to p4c-bmv2 folder
       * sudo python setup.py install
 		
   2. primitives.cpp - this file contains the implementation of DDoS switch primitive actions
-    * copy primitives.cpp to bmv2->targets->simple_switch (override existing primitives.cpp)
+    * copy primitives.cpp to bmv2->targets->simple_switch (override existing primitives.cpp, just note that this file is relative to April 2016 version)
     * cd to bmv2 folder and call make
 	
 3. run Virtual Ethernet setup script:
@@ -64,6 +64,7 @@
   * sudo ./veth_setup.sh
 	
 4. compile Driver files:
+  * check ASIC source and ASIC output Driver paths in the beginning of driver.cpp file
   * cd to ddos_switch folder
   * g++ driver.cpp -o driver -std=c++11
 	
